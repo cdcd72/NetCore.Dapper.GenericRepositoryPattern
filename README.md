@@ -8,12 +8,12 @@ Generic repository attern implementation for dapper in .Net Core.
 此專案以北風資料庫作為範例。  
 This project use Northwind database, for example.  
 [Northwind and pubs sample databases for Microsoft SQL Server](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
-# Last Version
+## Last Version
 1.0.0.0 (November 12, 2019)
-# Record
+## Record
 * 1.0.0.0
   * Initial Commit (初次上版) 
-# Refer Article
+## Refer Article
 * English
   * [Repository and Unit of Work Pattern](https://www.programmingwithwolfgang.com/repository-and-unit-of-work-pattern/)  
   * [Repository Pattern C#](https://kudchikarsk.com/repository-pattern-csharp/)  
