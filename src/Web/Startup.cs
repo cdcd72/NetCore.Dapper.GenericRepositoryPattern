@@ -47,7 +47,7 @@ namespace Web
             services.AddScoped<ICustomerRepository>(x => new CustomerRepository(GetConnection(Configuration)));
             services.AddScoped<IOrderRepository>(x => new OrderRepository(GetConnection(Configuration)));
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
