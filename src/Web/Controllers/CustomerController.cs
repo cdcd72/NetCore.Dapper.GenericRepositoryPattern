@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Web.Domain;
 using Web.Repositories.Interface;
@@ -31,7 +31,7 @@ namespace Web.Controllers
         [HttpGet("")]
         public async Task<string> Customers()
         {
-            return JsonConvert.SerializeObject(await _customerRepo.GetAllAsync());
+            return JsonSerializer.Serialize(await _customerRepo.GetAllAsync());
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace Web.Controllers
         [HttpGet("{id}")]
         public async Task<string> Customer(string id)
         {
-            return JsonConvert.SerializeObject(await _customerRepo.FindAsync(id));
+            return JsonSerializer.Serialize(await _customerRepo.FindAsync(id));
         }
 
         /// <summary>
