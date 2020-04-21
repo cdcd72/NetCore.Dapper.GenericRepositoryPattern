@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
+using Web.Core.Interfaces;
 
 namespace Web.Core
 {
@@ -14,9 +15,12 @@ namespace Web.Core
 
         #region Constructor
 
-        protected GenericRepository(IDbConnection connection)
+        protected GenericRepository(IConnectionFactory connectionFactory)
         {
-            Conn = connection;
+            Conn = connectionFactory.GetConnection();
+
+            // 開啟連線
+            Conn.Open();
         }
 
         #endregion

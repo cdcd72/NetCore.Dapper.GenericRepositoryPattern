@@ -27,10 +27,10 @@
         public static T ConvertFromString<T>(this string strValue) where T : struct
         {
             T t = default;
+
             if (typeof(System.Enum) != typeof(T).BaseType)
-            {
                 return t;
-            }
+
             return (T)System.Enum.Parse(typeof(T), strValue);
         }
     }

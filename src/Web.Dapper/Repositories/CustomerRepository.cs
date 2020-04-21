@@ -1,19 +1,18 @@
 ﻿using Dapper;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Threading.Tasks;
 using Web.Core;
+using Web.Core.Interfaces;
 using Web.Domain;
-using Web.Repositories.Interface;
 
-namespace Web.Repositories.Implement
+namespace Web.Dapper.Repositories
 {
     public class CustomerRepository : GenericRepository<Customer>, ICustomerRepository
     {
         #region Constructor
 
-        public CustomerRepository(IDbConnection connection) : base(connection) { }
+        public CustomerRepository(IConnectionFactory connectionFactory) : base(connectionFactory) { }
 
         #endregion
 
